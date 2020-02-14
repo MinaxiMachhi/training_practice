@@ -6,7 +6,7 @@
           <div class="d-flex justify-content-center h-200">
             <div class="user_card">
               <div class="d-flex justify-content-center">
-                <div class="brand_logo_container">
+                <div class="brand_logo_container"><br>
                   <img
                     src="@/assets/bacancy_og.png"
                     class="brand_logo"
@@ -29,6 +29,7 @@
                             placeholder="email"
                             class="form-control"
                             type="text"
+                            ref="email"
                           />
                         </div>
                         <div class="form-group input-group">
@@ -79,6 +80,11 @@ export default {
   },
   methods: {
     login() {
+      /*   if (!this.email || !this.password) {
+        this.$refs.email.style.borderColor = "red";
+        this.$refs.password.style.borderColor = "red";
+      } else {
+         */
       let email = localStorage.getItem("email");
       let password = localStorage.getItem("password");
 
@@ -93,7 +99,7 @@ export default {
 };
 </script>
 <style scoped>
-img{
+img {
   border-radius: 50%;
 }
 </style>
